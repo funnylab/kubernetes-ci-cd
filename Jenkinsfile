@@ -17,7 +17,7 @@ node {
         sh "docker build -t ${imageName} -f applications/hello-kenzan/Dockerfile applications/hello-kenzan"
     
     stage "Push"
-        sh "docker login -u kkanzo@bluedigm.com -p simbbo0131"
+        sh "docker login -u kkanzo -p simbbo0131"
         sh "docker push ${imageName}"
 
     stage "Deploy"
